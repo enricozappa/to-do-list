@@ -1,0 +1,217 @@
+html {
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    font-family: 'Quicksand', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    padding: 0;
+    transition-duration: 300ms;
+}
+
+button:hover {
+    color: #4b6cb7;
+}
+
+input[type="text"] {
+    font-family: 'Quicksand', sans-serif;
+    padding: 5px;
+}
+
+form input {
+    width: 100%;
+}
+
+.main-container {
+    padding: 0 15px;
+    position: relative;
+}
+
+.heading {
+    color: #FFFFFF;
+    font-size: 3rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    display: block;
+    margin: 30px auto;
+    max-width: 500px;
+    padding: 30px;
+}
+
+.add-task {
+    align-items: center;
+    border-bottom: 1px solid #4b6cb7;
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.error-message {
+    bottom: 3px;
+    color: #c93e34;
+    display: none;
+    font-size: 12px;
+    left: 0;
+    position: absolute;
+}
+
+.visible {
+    display: block;
+}
+
+#submit-button {
+    margin-left: 10px;
+}
+
+.task {
+    align-items: center;
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+    padding-right: 20px;
+    word-break: break-all;
+}
+
+.task_label {
+    cursor: default;
+    padding: 0 10px;
+    position: relative;
+    width: 100%;
+}
+
+.task_label:hover {
+    cursor: text;
+}
+
+.task_editor {
+    border-color: #4b6cb7;
+    border-style: dashed;
+    border-width: 1px;
+    color: #4b6cb7;
+    display: none;
+    left: 4px;
+    position: absolute;
+    top: -7px;
+    width: calc(100% - 15px);
+}
+
+.taskCheckbox:hover {
+    cursor: pointer;
+}
+
+.completed {
+    color: #c0c0c0;
+    text-decoration: line-through;
+}
+
+.delete_icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition-duration: 300ms;
+}
+
+.delete_icon:hover {
+    color: #4b6cb7;
+    cursor: pointer;
+}
+
+#clear-all {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#clear-all i {
+    font-size: 1.5rem;
+    transition-duration: 300ms;
+}
+
+#clear-all i:hover {
+    color: #4b6cb7;
+    cursor: pointer;
+}
+
+.tip {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* ------- Lightbox -------- */
+.lightbox {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    left: 50%;
+    max-width: 350px;
+    padding: 50px;
+    position: fixed;
+    top: 50vh;
+    transform: translateX(99999px) translateY(-50%);
+    transition-duration: 300ms;
+    width: 100%;
+    z-index: 99;
+}
+
+.lightbox-close {
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    transition-duration: 300ms;
+}
+
+.lightbox-confirm {
+    bottom: 11px;
+    left: 50%;
+    font-size: 30px;
+    position: absolute;
+    transform: translateX(-50%);
+    transition-duration: 300ms;
+}
+
+.lightbox-close:hover,
+.lightbox-confirm:hover {
+    cursor: pointer;
+    color: #4b6cb7;
+}
+
+.lightbox-text {
+    text-align: center;
+}
+
+.lightbox-input {
+    display: block;
+    margin: 20px auto 3px;
+    width: 100%;
+}
+
+.lightbox-error {
+    color: #c93e34;
+    display: block;
+    font-size: 12px;
+    opacity: 0;
+    text-align: center;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    content: '';
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 50;
+}

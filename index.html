@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>To-Do List</title>
+        
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link href="css/all.css" rel="stylesheet">
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Lightbox Overlay -->
+        <div class="overlay"></div>
+        
+        <!-- Heading -->
+        <h1 class="heading">To Do List</h1>
+
+        <!-- MAIN CONTAINER -->
+        <div class="main-container">
+            <!-- App container -->
+            <div class="card">
+                <!-- Form (used to add a new task) -->
+                <form class="add-task" action="index.html" method="post">
+                    <input type="text" placeholder="New task" name="task">
+                    <button id="submit-button" type="submit"><i class="fas fa-plus"></i></button>
+                    <span class="error-message">Sorry, no special chars or empty field</span>
+                </form>
+                
+                <!-- taskboard -->
+                <div class="taskboard">
+                    <ul id="tasklist"></ul>
+                    <!-- Clear icon -->
+                    <a id="clear-all"><i class="fas fa-trash"></i></a>
+                </div>
+            </div>
+
+            <div class="lightbox">
+                <i class="lightbox-close fas fa-times"></i>
+                <p class="lightbox-text">Here you can edit your task</p>
+                <input class="lightbox-input" type="text" placeholder="Edit task" name="task">
+                <span class="lightbox-error">Sorry, no special chars or empty field</span>
+                <i class="lightbox-confirm fas fa-check"></i>
+            </div>
+
+            <p class="tip">You can edit a task by clicking on it</p>
+        </div>
+        
+        <!-- JS -->
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="lightbox.js"></script>
+    </body>
+
+</html>
